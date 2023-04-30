@@ -8,7 +8,7 @@ import re
 
 # connect to the couchdb
 admin = 'cccadmin'  # change it to your admin account
-password = 'whysohard24！' # change it to your password
+password = 'whysohard24!' # change it to your password
 
 # send request to couchdb
 url = f'http://{admin}:{password}@127.0.0.1:5984/'
