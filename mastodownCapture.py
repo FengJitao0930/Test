@@ -47,13 +47,13 @@ class Listener(StreamListener):
         # Replace HTML entities
         readable_string = no_special_chars_string.replace('&gt;', '>')
         # if  "food" in readable_string or "meal" in readable_string or "dish" in readable_string:
+        if json_single['language'] == "en":
+            new_store = {}
+            new_store['id'] = json_single['account']['id']
+            new_store['content'] = readable_string
+            new_store['created_at'] = json_single['created_at']
 
-        new_store = {}
-        new_store['id'] = json_single['account']['id']
-        new_store['content'] = readable_string
-        new_store['created_at'] = json_single['created_at']
-
-        doc_id, doc_rev = db.save(new_store)
+            doc_id, doc_rev = db.save(new_store)
 
 
 m.stream_public(Listener())
