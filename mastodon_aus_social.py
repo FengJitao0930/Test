@@ -15,7 +15,7 @@ url = f'http://{admin}:{password}@127.0.0.1:5984/'
 couch = couchdb.Server(url)
 
 # create a couchdb database called 'mastodon_au_social', if the database exists,just find that database. If not, just creat the database.
-db_name = 'mastodon_au_social'
+db_name = 'mastodon_au_social_final'
 m = Mastodon(
     api_base_url='https://aus.social',
     access_token='2nwIHJnHrDkZkFnzbFEgDZmsYTTgu8aXnutLRRgermg'
