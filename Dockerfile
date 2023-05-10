@@ -12,4 +12,4 @@ RUN pip install couchdb;\
 
 EXPOSE 8080
 
-CMD["python", "./app.py"]
+CMD["python", "app.py"]
